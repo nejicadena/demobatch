@@ -19,4 +19,7 @@ public class Person{
 
     private int age;
 
+    @Column(name = "insertion_date")
+    private String insertionDate;
+
 }

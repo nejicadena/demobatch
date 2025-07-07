@@ -1,6 +1,8 @@
 package com.springbatch.demobatch.config;
 
+import com.springbatch.demobatch.steps.ItemProcessorStep;
 import com.springbatch.demobatch.steps.ItemReaderStep;
+import org.springframework.batch.item.ItemProcessor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -11,4 +13,9 @@ public class BatchConfiguration {
     public ItemReaderStep itemReaderStep(){
         return new ItemReaderStep();
     };
+
+    @Bean
+    public ItemProcessorStep itemProcessorStep(){
+        return new ItemProcessorStep();
+    }
 }
